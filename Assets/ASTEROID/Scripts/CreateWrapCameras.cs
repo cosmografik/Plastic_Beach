@@ -7,7 +7,6 @@ public class CreateWrapCameras : MonoBehaviour {
 
 	private Vector3 horizontalOffset;
 	private Vector3 verticalOffset;
-	private Vector3 zOffset;
 
 	private int oldScreenWidth;
 	private int oldScreenHeight;
@@ -35,7 +34,6 @@ public class CreateWrapCameras : MonoBehaviour {
 		//Figure out the screen bounds
 		horizontalOffset = Camera.main.ViewportToWorldPoint (new Vector3 (1.5f, 0.5f, -Camera.main.transform.position.z));
 		verticalOffset = Camera.main.ViewportToWorldPoint (new Vector3 (0.5f, 1.5f, -Camera.main.transform.position.z));
-		zOffset = new Vector3 (0, 0, Camera.main.transform.position.z);
 		
 		//Destroy any wrap cameras (if they exist)
 		foreach(GameObject cam in GameObject.FindGameObjectsWithTag("WrapCamera"))

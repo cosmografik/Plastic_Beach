@@ -15,7 +15,7 @@ public class ProjectileSpawnEditorWindow : Editor {
 	public override void OnInspectorGUI(){
 		ProjectileSpawn currentScript = (ProjectileSpawn)target;
 
-		currentScript.enabled = EditorGUILayout.Toggle ("Enabled", currentScript.enabled);
+		currentScript.spawningEnabled = EditorGUILayout.Toggle ("Enabled", currentScript.spawningEnabled);
 		currentScript.addRandomInertiaToProjectiles = EditorGUILayout.Toggle ("Random Intertia", currentScript.addRandomInertiaToProjectiles);
 
 		currentScript.inaccuracy = EditorGUILayout.FloatField ("Inaccuracy", currentScript.inaccuracy);

@@ -11,7 +11,7 @@ using System.Collections;
 */
 public class ProjectileSpawn : MonoBehaviour {
 
-	public bool enabled = true;
+	public bool spawningEnabled = true;
 	public float inaccuracy = 0.5f;
 	public float emitRate = 1.0f;
 	public float speed = 1.5f;
@@ -47,7 +47,7 @@ public class ProjectileSpawn : MonoBehaviour {
 	}
 
 	void Update () {
-		if (enabled) {
+		if (spawningEnabled) {
 			time += Time.deltaTime;
 			if (time > emitRate) {
 				Vector3 direction = transform.position - transform.forward + Random.insideUnitSphere * inaccuracy;

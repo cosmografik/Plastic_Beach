@@ -305,26 +305,10 @@ public class RopeEditor : Editor
 
         return aligned;
     }
-    void HandleFunc(int controlID, Vector3 position, Quaternion rotation, float size)
-    {
-        if (controlID == GUIUtility.hotControl)
-            GUI.color = Color.red;
-        else
-            GUI.color = Color.green;
-        Handles.Label(position, new GUIContent(nodeTexture), handleStyle);
-        GUI.color = Color.white;
-    }
-    void SolidHandleFunc(int controlID, Vector3 position, Quaternion rotation, float size)
-    {
-        Handles.Label(position, new GUIContent(dotHandleTexture), dothandleStyle);
-    }
-    void DeleteHandleFunc(int controlID, Vector3 position, Quaternion rotation, float size)
-    {
-        GUI.color = Color.red;
-        Handles.Label(position, new GUIContent(nodeTexture), handleStyle);
-        GUI.color = Color.white;
-    }
-    static void UpdateRope(Rope rope)
+	Handles.CapFunction HandleFunc = Handles.CircleHandleCap;
+	Handles.CapFunction SolidHandleFunc = Handles.ConeHandleCap;
+	Handles.CapFunction DeleteHandleFunc = Handles.CubeHandleCap;
+	static void UpdateRope(Rope rope)
     {
         DestroyChildren(rope);
         if (rope.SegmentsPrefabs==null||rope.SegmentsPrefabs.Length == 0)

@@ -9,7 +9,7 @@ public class ThrustEngineEditorWindow : Editor {
 	public override void OnInspectorGUI(){
 		ThrustEngine currentScript = (ThrustEngine)target;
 
-		currentScript.enabled = EditorGUILayout.Toggle ("Enabled", currentScript.enabled);
+		currentScript.thrustEnabled = EditorGUILayout.Toggle ("Enabled", currentScript.thrustEnabled);
 		currentScript.boundObject = (Rigidbody)EditorGUILayout.ObjectField ("Bound Body", currentScript.boundObject, typeof(Rigidbody), true);
 
 		if (currentScript.boundObject == null && currentScript.GetComponent<Rigidbody> () == null) {

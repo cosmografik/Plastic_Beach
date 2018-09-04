@@ -11,7 +11,7 @@ using System.Collections;
 */
 public class Magnet : MonoBehaviour {
 	public float magnetForce = 15.0f;
-	public bool enabled = true;
+	public bool magnetEnabled = true;
 	public bool attract = true;
 	public float innerRadius = 2.0f;
 	public float outerRadius = 5.0f; 
@@ -21,7 +21,7 @@ public class Magnet : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (enabled) {
+		if (magnetEnabled) {
 			Collider[] objects = Physics.OverlapSphere (transform.position, outerRadius);
 			foreach (Collider col in objects) {
 				if (col.GetComponent<Rigidbody> ()) { //Must be rigidbody
@@ -65,7 +65,7 @@ public class Magnet : MonoBehaviour {
 	}
 	
 	void OnDrawGizmos(){
-		if (enabled) {
+		if (magnetEnabled) {
 			Gizmos.color = Color.red;
 			Gizmos.DrawWireSphere(transform.position, outerRadius);
 			Gizmos.color = Color.yellow;

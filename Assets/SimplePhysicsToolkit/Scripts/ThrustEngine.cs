@@ -3,7 +3,7 @@ using System.Collections;
 
 public class ThrustEngine : MonoBehaviour {
 
-	public bool enabled = true; //System is on and thrusters will fire
+	public bool thrustEnabled = true; //System is on and thrusters will fire
 	public float maxPower = 500.0f;
 	public float currentPowerPercentage = 0.25f;
 
@@ -14,7 +14,6 @@ public class ThrustEngine : MonoBehaviour {
 	public Rigidbody boundObject;
 
 	Rigidbody thruster;
-	bool targetingParent = false;
 	bool forceDisableThruster = false;
 
 	float lastHoverPerc = 0.0f;
@@ -40,7 +39,7 @@ public class ThrustEngine : MonoBehaviour {
 	
 
 	void Update () {
-		if (enabled && forceDisableThruster != true) {
+		if (thrustEnabled && forceDisableThruster != true) {
 			if (hoverMode) {
 				RaycastHit hit;
 				if (Physics.Raycast (transform.position, -Vector3.up, out hit, hoverDistance + hoverSafeRange)) {

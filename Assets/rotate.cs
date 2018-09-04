@@ -5,7 +5,8 @@ public class rotate : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-	
+
+		
 	}
 
     public Vector3 rot = Vector3.zero;

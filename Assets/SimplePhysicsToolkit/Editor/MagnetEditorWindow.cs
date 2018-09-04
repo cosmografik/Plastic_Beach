@@ -8,7 +8,7 @@ public class MagnetEditorWindow : Editor {
 	public override void OnInspectorGUI(){
 		Magnet currentScript = (Magnet)target;
 
-		currentScript.enabled = EditorGUILayout.Toggle ("Enabled", currentScript.enabled);
+		currentScript.magnetEnabled = EditorGUILayout.Toggle ("Enabled", currentScript.magnetEnabled);
 		currentScript.attract = EditorGUILayout.Toggle ("Attract/Repel", currentScript.attract);
 
 		currentScript.magnetForce = EditorGUILayout.FloatField ("Force", currentScript.magnetForce);
