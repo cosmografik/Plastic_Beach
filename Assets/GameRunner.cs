@@ -33,7 +33,7 @@ public class GameRunner : MonoBehaviour {
 
 	public static void GameOver(){
 		if (Application.isEditor){
-			SceneManager.LoadScene("Scenes/GameOver");
+			//SceneManager.LoadScene("Scenes/GameOver");
 		} else {
 			Application.Quit();
 		}
