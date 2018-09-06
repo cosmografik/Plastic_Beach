@@ -35,7 +35,6 @@ public class GameRunner : MonoBehaviour {
 
 	public static void GameOver(){
 		JsonPump.Dump<Record>(Score.record);
-		
 		if (Application.isEditor){
 			//SceneManager.LoadScene("Scenes/GameOver");
 		} else {
