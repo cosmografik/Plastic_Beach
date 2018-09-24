@@ -22,6 +22,17 @@ public class GameRunner : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		string time = ""+maxTime;
+		string[] args = System.Environment.GetCommandLineArgs ();
+		for (int i = 0; i < args.Length; i++) {
+			if (args [i] == "-gametime") {
+				time = args [i + 1];
+			}
+		}
+
+		maxTime = float.Parse(time);
+
+
 		startTime = Time.time;
 	}
 	
@@ -35,8 +46,8 @@ public class GameRunner : MonoBehaviour {
 
 	public static void GameOver(){
 		JsonPump.Dump<Record>(Score.record);
-		
 		if (Application.isEditor){
+			Debug.Log("Killdest");
 			//SceneManager.LoadScene("Scenes/GameOver");
 		} else {
 			Application.Quit();
