@@ -5702,10 +5702,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9da4ca07c17c4174b9d5987f0f1e631, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  open: 32
-  closedAngle: -30
+  open: 274
+  closedAngle: -25
   openAngle: 40
-  smoothTime: 0.18
+  smoothTime: 0.1
 --- !u!1 &301263933
 GameObject:
   m_ObjectHideFlags: 0
@@ -11514,10 +11514,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9da4ca07c17c4174b9d5987f0f1e631, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  open: 32
-  closedAngle: 30
+  open: 274
+  closedAngle: 25
   openAngle: -40
-  smoothTime: 0.18
+  smoothTime: 0.1
 --- !u!1 &531642796
 GameObject:
   m_ObjectHideFlags: 0
@@ -13637,7 +13637,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &954915946
 Transform:
   m_ObjectHideFlags: 0
@@ -13645,7 +13645,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 954915945}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -27.879269, y: 1.5930908, z: -0.07457723}
+  m_LocalPosition: {x: -55.74, y: 17.74, z: -0.07457723}
   m_LocalScale: {x: 0.4204921, y: 0.4204919, z: 0.4204919}
   m_Children: []
   m_Father: {fileID: 1014563258}
@@ -13725,7 +13725,7 @@ Rigidbody2D:
   m_Mass: 0.29
   m_LinearDrag: 0.2
   m_AngularDrag: 9.64
-  m_GravityScale: 4.76
+  m_GravityScale: 1
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -16682,7 +16682,7 @@ MonoBehaviour:
   - {fileID: 1536681869665482, guid: 6aafeeb3e464f4c4abeb49ca65042d51, type: 2}
   - {fileID: 1536681869665482, guid: f21ce268834e54ea49e4b4857712591e, type: 2}
   - {fileID: 1536681869665482, guid: f21ce268834e54ea49e4b4857712591e, type: 2}
-  averageSpawnFrequency: 2.14
+  averageSpawnFrequency: 1.6
   impulse: 34.59
   reparent: 1
   reparentTarget: {fileID: 1512072458}
@@ -17138,7 +17138,7 @@ MonoBehaviour:
   dangleDamping: 0.2
   up: 273
   down: 274
-  speed: 8.27
+  speed: 9.43
   dtMultiplier: 5
   cycles: 20
   segmentLength: 0.79
